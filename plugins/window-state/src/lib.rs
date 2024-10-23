@@ -472,7 +472,6 @@ impl Builder {
                             .try_lock()
                             .is_ok()
                             && !window_clone.is_minimized().unwrap_or_default()
-                            && !window_clone.is_maximized().unwrap_or_default()
                         {
                             let mut c = cache.lock().unwrap();
                             if let Some(state) = c.get_mut(&label) {
